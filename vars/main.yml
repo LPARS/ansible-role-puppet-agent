@@ -1,0 +1,3 @@
+---
+puppet_agent_package: "puppet-agent"
+puppet_agent_service: "puppet"

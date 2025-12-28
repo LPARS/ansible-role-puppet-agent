@@ -1,0 +1,2 @@
+---
+puppet_release_rpm: "https://yum.puppetlabs.com/puppet{{ puppet_version }}-release-el-{{ ansible_distribution_major_version }}.noarch.rpm"

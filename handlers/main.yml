@@ -1,0 +1,7 @@
+---
+- name: "Ensure {{ puppet_agent_service }} is started and enabled"
+  ansible.builtin.service:
+    name: "{{ puppet_agent_service }}"
+    state: "{{ puppet_agent_service_state }}"
+    enabled: "{{ puppet_agent_service_enabled }}"
+  when: puppet_agent_service_manage

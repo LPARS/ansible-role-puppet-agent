@@ -1,0 +1,20 @@
+---
+- name: "Include installation variables for {{ ansible_facts['os_family'] }}"
+  ansible.builtin.include_vars: "{{ ansible_facts['os_family'] }}-vars.yml"
+
+- name: "Include installation tasks for {{ ansible_facts['os_family'] }}"
+  ansible.builtin.include_tasks: "{{ ansible_facts['os_family'] }}-tasks.yml"
+
+- name: "Ensure {{ puppet_agent_package }} {{ puppet_version }} is installed"
+  ansible.builtin.package:
+    name: "{{ puppet_agent_package }}"
+    state: present
+
+- name: "Ensure server is set in puppet.conf"
+  community.general.ini_file:
+    path: /etc/puppetlabs/puppet/puppet.conf
+    section: main
+    option: server
+    value: "{{ puppet_agent_server_fqdn }}"
+    state: present
+  notify: "Ensure {{ puppet_agent_service }} is started and enabled"

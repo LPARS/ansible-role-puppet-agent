@@ -1,0 +1,47 @@
+# Ansible Role: Puppet Agent
+
+[![CI](https://github.com/LPARS/ansible-role-puppet-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/LPARS/ansible-role-puppet-agent/actions/workflows/ci.yml)
+
+An Ansible role that installs [Puppet](https://www.puppet.com) or [OpenVox](https://voxpupuli.org/openvox/) agent on Linux.
+
+## Requirements
+
+None.
+
+## Role Variables
+
+Available variables are listed below, along with default values (see `defaults/main.yml`):
+
+    puppet_version: "7"
+
+The major version of Puppet/OpenVox to be installed.
+
+    puppet_agent_server_fqdn: ""
+
+The server the Puppet/OpenVox agent will request its catalog from.
+
+    puppet_agent_service_state: "started"
+    puppet_agent_service_enabled: true
+    puppet_agent_service_manage: false
+
+The service that should be run on this server. By default, this role will not manage the Puppet/OpenVox agent service.
+
+
+## Dependencies
+
+None.
+
+## Example Playbook
+
+    - name: Install and configure Puppet/OpenVox agent
+      hosts: all
+      become: true
+      roles:
+        - lpars.puppet_agent
+
+## License
+
+MIT
+
+## Acknowledgments
+This Ansible role was inspired by Jeff Geerling's https://github.com/geerlingguy/ansible-role-puppet. A huge thanks to him for helping me learn Ansible.

@@ -1,0 +1,7 @@
+---
+puppet_version: "7"
+puppet_agent_server_fqdn: ""
+
+puppet_agent_service_state: "started"
+puppet_agent_service_enabled: true
+puppet_agent_service_manage: false
