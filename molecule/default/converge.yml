@@ -10,4 +10,4 @@
       when: ansible_facts.os_family == 'Debian'
 
   roles:
-    - role: ../../../ansible-role-puppet-agent
+    - role: ../../../lpars.puppet_agent
