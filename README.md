@@ -14,11 +14,11 @@ Available variables are listed below, along with default values (see `defaults/m
 
     puppet_variant: "openvox"
 
-The variant of the agent package to install. Choices include puppet or openvox. Defaults to openvox.
+The variant of the agent package to install. Choices include puppet or openvox. Defaults to `openvox`.
 
     puppet_version: "8"
 
-The major version of Puppet/OpenVox to be installed. Defaults to version 8.
+The major version of Puppet/OpenVox to be installed. Defaults to version `8`.
 
     puppet_agent_server_fqdn: ""
 
