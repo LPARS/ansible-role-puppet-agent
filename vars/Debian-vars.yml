@@ -1,5 +1,8 @@
----
-distro_id: "{{ ansible_distribution | lower }}{{ ansible_distribution_major_version }}"
+version_fact_map:
+  Debian: "{{ ansible_distribution_major_version }}"
+  Ubuntu: "{{ ansible_distribution_version }}"
+
+distro_id: "{{ ansible_distribution | lower }}{{ version_fact_map[ansible_distribution] }}"
 
 puppet_release_map:
   puppet: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb"
