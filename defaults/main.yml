@@ -1,6 +1,6 @@
 ---
-puppet_variant: "puppet"
-puppet_version: "7"
+puppet_variant: "openvox"
+puppet_version: "8"
 puppet_agent_server_fqdn: ""
 
 puppet_agent_service_state: "started"
