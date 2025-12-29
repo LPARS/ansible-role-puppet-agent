@@ -1,13 +1,5 @@
 ---
 - name: Converge
   hosts: all
-
-  pre_tasks:
-    - name: Update apt cache if necessary.
-      ansible.builtin.apt:
-        update_cache: true
-        cache_valid_time: 300
-      when: ansible_facts.os_family == 'Debian'
-
   roles:
-    - role: ../../../lpars.puppet_agent
+    - role: lpars.puppet_agent
