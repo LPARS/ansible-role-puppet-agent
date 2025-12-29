@@ -1,4 +1,5 @@
 ---
+puppet_variant: "puppet"
 puppet_version: "7"
 puppet_agent_server_fqdn: ""
 

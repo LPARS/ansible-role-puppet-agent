@@ -1,2 +1,8 @@
 ---
-puppet_release_deb: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb"
+distro_id: "{{ ansible_distribution | lower }}{{ ansible_distribution_major_version }}"
+
+puppet_release_map:
+  puppet: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb"
+  openvox: "https://apt.voxpupuli.org/openvox{{ puppet_version }}-release-{{ distro_id }}.deb"
+
+puppet_release_deb: "{{ puppet_release_map[puppet_variant] }}"
