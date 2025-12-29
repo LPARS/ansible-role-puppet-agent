@@ -28,7 +28,7 @@ The server the Puppet/OpenVox agent will request its catalog from.
     puppet_agent_service_enabled: true
     puppet_agent_service_manage: false
 
-The service that should be run on this server. By default, this role will not manage the Puppet/OpenVox agent service.
+The state of the Puppet/OpenVox agent service. By default, this role will not manage it.
 
 ## Dependencies
 
