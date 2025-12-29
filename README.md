@@ -12,9 +12,13 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    puppet_version: "7"
+    puppet_variant: "openvox"
 
-The major version of Puppet/OpenVox to be installed.
+The variant of the agent package to install. Choices include puppet or openvox. Defaults to openvox.
+
+    puppet_version: "8"
+
+The major version of Puppet/OpenVox to be installed. Defaults to version 8.
 
     puppet_agent_server_fqdn: ""
 
@@ -25,7 +29,6 @@ The server the Puppet/OpenVox agent will request its catalog from.
     puppet_agent_service_manage: false
 
 The service that should be run on this server. By default, this role will not manage the Puppet/OpenVox agent service.
-
 
 ## Dependencies
 
