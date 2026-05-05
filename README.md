@@ -10,8 +10,6 @@ None.
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `defaults/main.yml`):
-
     puppet_variant: "openvox"
 
 The variant of the agent package to install. Choices include puppet or openvox. Defaults to `openvox`.
