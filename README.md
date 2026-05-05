@@ -36,9 +36,7 @@ The state of the Puppet/OpenVox agent service. By default, this role will not ma
 
 ## Example Playbook
 
-    - name: Install and configure Puppet/OpenVox agent
       hosts: all
-      gather_facts: true
       become: true
       roles:
         - lpars.puppet_agent
