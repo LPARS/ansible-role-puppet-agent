@@ -1,3 +1,4 @@
+---
 version_fact_map:
   Debian: "{{ ansible_facts['distribution_major_version'] }}"
   Ubuntu: "{{ ansible_facts['distribution_version'] }}"
