@@ -30,7 +30,7 @@ The state of the Puppet/OpenVox agent service. By default, this role will not ma
 
 ## Dependencies
 
- - `community.general`
+None.
 
 ## Example Playbook
 
