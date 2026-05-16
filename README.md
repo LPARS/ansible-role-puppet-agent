@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/LPARS/ansible-role-puppet-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/LPARS/ansible-role-puppet-agent/actions/workflows/ci.yml)
 
-This role installs [Puppet](https://www.puppet.com) or [OpenVox](https://voxpupuli.org/openvox/) agent on Linux.
+An Ansible role that installs [Puppet](https://www.puppet.com) or [OpenVox](https://voxpupuli.org/openvox/) agent on Linux.
 
 ## Requirements
 
