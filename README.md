@@ -6,7 +6,15 @@ This role installs [Puppet](https://www.puppet.com) or [OpenVox](https://voxpupu
 
 ## Requirements
 
-None.
+This role requires the `community.general` collection to be installed. You can include it in your
+`requirements.yml` like this:
+
+```
+---
+collections:
+  - name: community.general
+    version: ">12.0.0"
+```
 
 ## Role Variables
 
