@@ -8,4 +8,4 @@
 - name: "Update apt cache if necessary"
   ansible.builtin.apt:
     update_cache: true
-  when: puppet_release_deb_install.changed
+  when: puppet_release_deb_install['changed']
