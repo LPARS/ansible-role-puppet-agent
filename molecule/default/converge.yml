@@ -1,7 +1,6 @@
 ---
 - name: Converge
   hosts: all
-  become: true
   tasks:
     - name: "Include lpars.puppet_agent"
       ansible.builtin.include_role:
